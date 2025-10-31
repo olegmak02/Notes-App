@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: app
+  data:
+    mongodb:
+      uri: mongodb://root:root@mongo:27017/notes-app?authSource=admin
+      database: notes-app
+
+application:
+  security:
+    jwt:
+      secret-key: ${JWT_SECRET:7d88bfe396d73d851213c175a549d67bb478eeacf6ff8df4a3c92237e71b69e0}
+      expiration: 600000       # 10 minutes
